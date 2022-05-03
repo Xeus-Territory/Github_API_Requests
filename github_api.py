@@ -151,7 +151,6 @@ class GithubAPI(object):
                              "sha": self.get_content_new_file_on_repo(name_repo, name_file)
                          }),
                          headers = self.headers)
-        print(response.status_code)
         if (response.status_code == 200):
             return "Repository update successfully"
         if (response.status_code == 400):
